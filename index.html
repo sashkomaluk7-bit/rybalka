@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Риболовля для новачків</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(180deg,#0b2a4a,#123f63 40%,#1a5a7a 70%,#0d3347);background-attachment:fixed;color:#e8eef5;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+.hero{text-align:center;padding:50px 20px 30px}
+.hero-icon{font-size:56px;display:block;margin-bottom:10px}
+.hero h1{font-size:clamp(26px,6vw,40px);color:#fff;text-shadow:0 2px 20px #0009;margin-bottom:10px}
+.hero p{font-size:clamp(14px,3vw,17px);color:#b8cfe0;max-width:600px;margin:0 auto;line-height:1.6}
+.divider{width:80px;height:3px;background:linear-gradient(90deg,transparent,#4fc3f7,transparent);margin:22px auto;border-radius:2px}
+.section-title{text-align:center;font-size:clamp(18px,4vw,23px);font-weight:800;color:#4fc3f7;margin:45px 0 18px}
+.section-title span{font-size:26px;display:block;margin-bottom:6px}
+.menu{display:flex;flex-direction:column;gap:10px}
+.menu-item{background:#ffffff12;border:1px solid #ffffff1f;border-radius:14px;overflow:hidden;transition:.3s}
+.menu-item.open{background:#ffffff1a;border-color:#4fc3f780}
+.menu-btn{width:100%;background:none;border:none;color:#e8eef5;font-family:inherit;font-size:clamp(14px,3.2vw,16px);font-weight:600;padding:16px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left}
+.menu-btn:hover{color:#4fc3f7}
+.num{flex-shrink:0;width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#1e3a5f,#2a5a8a);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#4fc3f7;border:1px solid #4fc3f750}
+.arrow{margin-left:auto;font-size:12px;color:#4fc3f7;transition:transform .35s}
+.menu-item.open .arrow{transform:rotate(180deg)}
+.content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .4s ease;padding:0 18px}
+.menu-item.open .content{max-height:3000px;padding:0 18px 20px}
+.content-inner{border-top:1px solid #ffffff14;padding-top:16px;line-height:1.7;font-size:clamp(13.5px,3vw,15px);color:#c8d8e8}
+.content-inner h3{color:#4fc3f7;font-size:14.5px;margin:16px 0 7px}
+.content-inner h3:first-child{margin-top:0}
+.content-inner p{margin-bottom:9px}
+.content-inner ul,.content-inner ol{margin:7px 0 12px 20px}
+.content-inner li{margin-bottom:5px}
+.content-inner strong{color:#e8eef5}
+.highlight{background:#4fc3f71f;border-left:3px solid #4fc3f7;padding:9px 13px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.95em}
+.warning{background:#ff98001a;border-left:3px solid #ff9800;padding:9px 13px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.95em;color:#ffcc80}
+.tag{display:inline-block;background:#4fc3f726;color:#4fc3f7;padding:2px 9px;border-radius:20px;font-size:11.5px;font-weight:600;margin-right:5px}
+.shop-link{display:flex;align-items:center;gap:12px;padding:16px 18px;background:#ffffff12;border:1px solid #ffffff1f;border-radius:14px;text-decoration:none;color:#e8eef5;font-weight:600;font-size:clamp(14px,3.2vw,16px);transition:.3s;margin-bottom:10px}
+.shop-link:hover{background:#ffffff1f;border-color:#4fc3f780;transform:translateX(4px);color:#4fc3f7}
+.shop-link .num{background:linear-gradient(135deg,#2a5a8a,#4fc3f7);color:#fff}
+.shop-link .arrow{transform:rotate(-45deg);font-size:16px}
+.footer{text-align:center;margin-top:45px;padding:25px 20px;color:#7a9bb8;font-size:13px;border-top:1px solid #ffffff14}
+.footer .fish{font-size:26px;display:block;margin-bottom:8px}
+@media(max-width:500px){.container{padding:10px 10px 40px}.hero{padding:35px 10px 20px}.menu-btn{padding:13px 13px;gap:9px}.content{padding:0 13px}.menu-item.open .content{padding:0 13px 16px}.num{width:28px;height:28px;font-size:12px}.shop-link{padding:13px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+<span class="hero-icon">🎣</span>
+<h1>Риболовля для новачків</h1>
+<p>Усе, що потрібно знати, щоб упевнено почати ловити рибу. Натисни на пункт — отримаєш розбір.</p>
+<div class="divider"></div>
+</div>
+
+<div class="menu">
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">1</span><span>Вудлища та котушки для новачків</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>🎯 Вудлище</h3>
+<p>Для початківця найкраще підійде <strong>легке вудлище з тестом 1–8 грамів</strong>. Воно чутливе та прощає помилки. Не гонись за дешевизною — китайські моделі часто ламаються.</p>
+<p>Перевірені бренди: <strong>Lucky John, Crazy Fish, Kosadaka, Maximus</strong>. Бюджет — до 3000 гривень.</p>
+<h3>🎣 Котушка</h3>
+<p>Має бути <strong>легкою та простою</strong>. Розмір шпулі — <strong>1000</strong>. Вага — до 250 г.</p>
+<p>Моделі: <strong>Akara Ultra Sport, Kosadaka Manticora, Daiwa 20 Crossfire LT, Shimano Catana</strong>.</p>
+<div class="highlight">💡 Кількість підшипників — маркетинг. Перевір плавність ходу та люфти.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">2</span><span>Ідеальні проводки для спінінга</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Рівномірна</h3>
+<p>Закинув — повільно крутиш котушку. Для вертушок і коливалок. У холодній воді сповільнюйся.</p>
+<h3>Ступінчаста (джиг)</h3>
+<p><strong>2–3 оберти → пауза → знову оберти</strong>. Поклівка найчастіше на паузі.</p>
+<h3>Твічинг</h3>
+<p>Різкі ривки + паузи. Восени паузи до 5–7 секунд.</p>
+<div class="highlight">💡 Порожня серія закидів — змінюй приманку або сповільнюй проводку.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">3</span><span>Як в'язати гачки</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Для новачків: «Клінч»</h3>
+<p>Продягни волосінь у вушко, 5–6 обертів, кінчик у петлю біля вушка, змочи та затягни.</p>
+<h3>Для просунутих: «Паломар»</h3>
+<p>Склади волосінь удвічі, петлю у вушко, перекинь через гачок, продягни кінці, змочи та затягни.</p>
+<h3>Важливо</h3>
+<ul><li><strong>Коротке ців'я</strong> — хліб, зерно, каша</li><li><strong>Довге ців'я</strong> — черв'як, личинки, живець</li><li>Гачок має бути <strong>гострим</strong></li></ul>
+<div class="highlight">💡 Завжди змочуй вузол перед затягуванням.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">4</span><span>Що таке фідер?</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Визначення</h3>
+<p><strong>Фідер</strong> — донна снасть з годівницею. Вудлище з гнучкою вершинкою, годівниця з прикормкою та гачок. Постійно підгодовуєш точку — риба підходить сама.</p>
+<h3>Що потрібно</h3>
+<ul><li>Фідерне вудлище 3–4 м</li><li>Котушка 3000–4000</li><li>Годівниці різної ваги</li><li>Грузик для заміру дна</li><li>Багато прикормки</li></ul>
+<p>Ловлять ляща, карася, коропа, плітку, густеру.</p>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">5</span><span>Карпова ловля та флет-метод</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Карпова ловля</h3>
+<p>Окремий напрямок зі своїми снастями та прикормками. Для новачка простіше — <strong>флет-метод</strong>.</p>
+<h3>Флет-метод</h3>
+<p><strong>Флет</strong> — плоска годівниця з важкою основою. Гачок на <strong>короткому повідці (5–10 см)</strong> у прикормці. Риба ссе корм і засікається — самопідсічка.</p>
+<h3>Як в'язати</h3>
+<ol><li>Волосінь через годівницю</li><li>Бусина та вертлюжок</li><li>Поводок 5–10 см</li><li>Насадка в корм</li><li>Утрамбувати прес-формою</li></ol>
+<h3>Пелетс</h3>
+<p>Залити водою 1:1, настояти 10–20 хв. Консистенція — густа каша, що тримається в годівниці.</p>
+<div class="highlight">💡 Поводок не довший за 10 см — інакше самопідсічка не спрацює.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">6</span><span>Осінній жор щуки</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Коли</h3>
+<p>Пік — <strong>світанок і вечірні сутінки</strong>.</p>
+<h3>Де</h3>
+<ul><li>Край рослинності та очерету</li><li>Звали глибини біля мілин</li><li>Гирла приток</li><li>Бровки та ями</li></ul>
+<h3>Проводки</h3>
+<p><strong>Твічинг із паузами 5–7 с</strong> — поклівка в момент зупинки. <strong>Ступінчаста</strong>: 3–4 оберти → пауза.</p>
+<h3>Приманки</h3>
+<p>Воблери від 10 см, джиг, поролон, коливалки. Прозора вода — натуральні кольори, каламутна — яскраві.</p>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">7</span><span>Що таке сітки? (Дисклеймер)</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<div class="warning">⚠️ Сітки — це браконьєрство. Любительська ловля сітками <strong>заборонена законом</strong>. Лише на своїх приватних водоймах.</div>
+<h3>Технічно</h3>
+<p>Полотно з волосіні з комірками поперек руху риби. Риба заплутується зябрами.</p>
+<h3>Чому погано</h3>
+<p>Виловлюють <strong>усе підряд</strong> — і велику рибу, і молодь. Покинуті сітки «ловлять» роками.</p>
+<div class="highlight">💡 Легальна альтернатива — фідер або карпова ловля.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">8</span><span>Наживки: що насаджувати</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Універсальні</h3>
+<p><span class="tag">Черв'як</span> Лящ, сазан, сом, карась, окунь.</p>
+<p><span class="tag">Опариш</span> Уклейка, карась, плітка, лин, язь, окунь.</p>
+<p><span class="tag">Мотиль</span> Лящ, густера, плітка. Ідеальний взимку.</p>
+<h3>Для хижака</h3>
+<p><span class="tag">Живець</span> Щука, окунь, судак. Рибка 5–8 см.</p>
+<p><span class="tag">Мертва риба</span> Сом, щука, судак.</p>
+<p><span class="tag">П'явка</span> Судак, сазан, щука, великий окунь.</p>
+<h3>Рослинні</h3>
+<p><span class="tag">Кукурудза</span> Короп, плітка, карась.</p>
+<p><span class="tag">Хліб</span> Плітка, карась, лящ.</p>
+<p><span class="tag">Коник</span> Сом, головень, язь.</p>
+<div class="highlight">💡 Чим холодніша вода — тим більше тваринної наживки.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">9</span><span>Раколовка: що це і що класти</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Що це</h3>
+<p>Пастка для раків — конусна або кільцева сітка з входом. На дно на ніч. Час: <strong>22:00–4:00</strong>.</p>
+<h3>Де ставити</h3>
+<ul><li>Чиста вода, тверде дно</li><li>Глибина 0,5–3 м</li><li>Затоки, стариці, корчі</li></ul>
+<h3>Що класти</h3>
+<ul><li><strong>Свіжа риба</strong> — надріж</li><li><strong>Куряча печінка</strong> або яловичі легені</li><li><strong>Нежирне м'ясо</strong></li><li><strong>Жаба</strong></li><li><strong>Макуха соняшника</strong></li></ul>
+<div class="highlight">💡 Загорни приманку в марлю — запах іде, рак не з'їсть швидко.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">10</span><span>Ехолот: навіщо він потрібен</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Що це</h3>
+<p><strong>Ехолот</strong> — прилад, що показує глибину, рельєф дна та об'єкти в товщі води.</p>
+<h3>Корисний</h3>
+<ul><li><strong>Знаходить бровки, ями, корчі</strong></li><li><strong>Показує глибину</strong></li><li><strong>Допомагає знайти стаю</strong></li><li>Економить час</li></ul>
+<h3>Важливо</h3>
+<p>Ехолот — <strong>не гарантія улову</strong>. Показує, де риба <em>може</em> бути. Основне — розвідка рельєфу.</p>
+<p>Для берега — бездротові (Deeper).</p>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">11</span><span>Як зрозуміти, що у водоймі є риба</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Дивись на воду</h3>
+<ul><li><strong>Сплески малька</strong> — поруч хижак</li><li><strong>Круги на воді</strong> — риба годується</li><li><strong>Бульбашки з дна</strong> — лящ, карась, короп</li><li><strong>«Казан»</strong> — вода кипить від сплесків</li></ul>
+<h3>Птахи</h3>
+<p>Чайки, що кружляють або пікірують в одну точку — там мальок, а під ним хижак.</p>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">12</span><span>Як зрозуміти, яку рибу ти зловив</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<ul>
+<li><strong>Щука</strong> — витягнуте тіло, плями, зубаста паща</li>
+<li><strong>Окунь</strong> — смугастий, колючий плавець, червоні плавці</li>
+<li><strong>Судак</strong> — витягнутий, темні смуги, ікла</li>
+<li><strong>Лящ</strong> — високе тіло, сріблястий, довгий анальний плавець</li>
+<li><strong>Карась</strong> — високе тіло, золотистий/сріблястий</li>
+<li><strong>Плітка</strong> — срібляста, червоні очі та плавці</li>
+<li><strong>Короп</strong> — великий, з вусами</li>
+</ul>
+<div class="highlight">💡 Сфотографуй і подивись у додатку-визначнику.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">13</span><span>Зачепився за траву або корч</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Трава</h3>
+<ol><li>Не смикай різко</li><li>Послаб волосінь і зачекай</li><li>Посмикай кінчиком вудлища</li><li>Повільно тягни</li></ol>
+<h3>Корч</h3>
+<ol><li>Не тягни сильно</li><li>Різко послаб і натягни</li><li>Використай відчеп</li><li>Якщо ні — обривай</li></ol>
+<div class="highlight">💡 Носи відчеп — рятує приманки і нерви.</div>
+</div></div>
+</div>
+
+</div>
+
+<h2 class="section-title"><span>📚</span>Додатково</h2>
+
+<div class="menu">
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">14</span><span>Погода та час: коли клює найкраще</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Час</h3>
+<p><strong>Світанок (4:00–7:00)</strong> та <strong>сутінки (18:00–21:00)</strong> — золотий час.</p>
+<h3>Погода</h3>
+<ul><li><strong>Стабільна 2–3 дні</strong> — риба активна</li><li><strong>Різка зміна тиску</strong> — клів слабшає</li><li><strong>Перед грозою</strong> — жор хижака</li><li><strong>Теплий дощ</strong> — плюс для білої риби</li><li><strong>Вітер</strong> — західний/південний краще</li></ul>
+<h3>Пори року</h3>
+<p><strong>Весна</strong> — жор перед нерестом. <strong>Літо</strong> — ранок/вечір. <strong>Осінь</strong> — жор хижака. <strong>Зима</strong> — перший/останній лід.</p>
+<div class="highlight">💡 Веди щоденник: погода, місце, приманка, результат.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">15</span><span>Прикормка: як привчити рибу до точки</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Основа</h3>
+<p>Прикормка створює <strong>кормове пятно</strong>. Риба звикає до місця і повертається.</p>
+<h3>Склад</h3>
+<ul><li><strong>База</strong> — панірувальні сухарі, макуха, вівсянка</li><li><strong>Аромат</strong> — аніс, ваніль, мед, часник</li><li><strong>Тваринна частина</strong> — мотиль, опариш, черв'як</li><li><strong>Баласт</strong> — земля або глина для важкої прикормки</li></ul>
+<h3>Правила</h3>
+<ul><li>Не перегодовуй — риба наїдається і не бере наживку</li><li>У холодній воді — менше прикормки, більше аромату</li><li>Кидай в одну точку</li></ul>
+<div class="highlight">💡 Спочатку 5–6 стартових закидів з годівницею, далі — точково.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">16</span><span>Безпека на риболовлі</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>На воді</h3>
+<ul><li>Рятувальний жилет на човні — обов'язково</li><li>Не лови під час грози — вудлище як громовідвід</li><li>Не заходь у незнайому воду — ями та корчі</li><li>Стеж за рівнем води на гірських річках</li></ul>
+<h3>Гачки та снасті</h3>
+<ul><li>Тримай гачки окремо — сумка або коробка</li><li>Обов'язково кусачки для волосіні</li><li>Аптечка: пластир, антисептик, пінцет для гачка</li></ul>
+<h3>Сонце та комахи</h3>
+<ul><li>Крем SPF, головний убір</li><li>Репелент від комарів та кліщів</li><li>Після лісу — огляд на кліщів</li></ul>
+<div class="highlight">💡 Якщо гачок у шкірі — не витягай різко, звернись до лікаря.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">17</span><span>Як зберігати та готувати улов</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Зберігання</h3>
+<ul><li><strong>Садок</strong> у воді — риба жива до кінця риболовлі</li><li><strong>Кукан</strong> — для хижака, але риба швидко гине</li><li><strong>Термосумка з льодом</strong> — якщо довго до дому</li><li><strong>Засолити одразу</strong> — якщо спека</li></ul>
+<h3>Чищення</h3>
+<ul><li>Чисть одразу або заморозь — свіжа риба краще</li><li>Видаляй зябра та нутрощі — джерело гіркоти</li><li>Промивай холодною водою</li></ul>
+<h3>Смаження</h3>
+<p>Обваляй у борошні з сіллю та перцем, смаж на розігрітій олії до золотистої скоринки.</p>
+<div class="highlight">💡 Дрібну рибу (плітка, окунь) краще в'ялити або смажити цілою.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">18</span><span>Помилки новачків</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<ul>
+<li><strong>Занадто товста волосінь</strong> — риба бачить і не бере</li>
+<li><strong>Тупий гачок</strong> — підсічка не виходить, риба сходить</li>
+<li><strong>Шум і різкі рухи</strong> — відлякують рибу біля берега</li>
+<li><strong>Одна приманка весь день</strong> — не знайшов «ключик»</li>
+<li><strong>Немає плану</strong> — кидаєш навмання замість пошуку рельєфу</li>
+<li><strong>Перегодовування</strong> — риба сита, наживку ігнорує</li>
+<li><strong>Ігнорування погоди</strong> — виходиш у найгірший час</li>
+<li><strong>Поспіх при підсічці</strong> — смикаєш до поклівки</li>
+</ul>
+<div class="highlight">💡 Найкращий спосіб навчитись — ловити з досвідченим рибалкою.</div>
+</div></div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn"><span class="num">19</span><span>Зимова риболовля: з чого почати</span><span class="arrow">▼</span></button>
+<div class="content"><div class="content-inner">
+<h3>Спорядження</h3>
+<ul><li><strong>Льодобур</strong> — 130–150 мм</li><li><strong>Зимова вудка</strong> з кивком</li><li><strong>Мотиль, опариш, черв'як</strong></li><li><strong>Ящик</strong> для сидіння та зберігання</li><li><strong>Теплий одяг</strong> та льодоступи</li></ul>
+<h3>Безпека</h3>
+<ul><li>Лід <strong>мінімум 7 см</strong> для людини</li><li>Не ходи поодинці</li><li>Перевіряй лід пішнею</li><li>Не збирайся великими групами</li></ul>
+<h3>Тактика</h3>
+<p>Буриш лунки на відстані 3–5 м, перевіряєш кожну, знаходиш рибу — затримуєшся.</p>
+<div class="highlight">💡 Найкращий клів — перший та останній лід.</div>
+</div></div>
+</div>
+
+</div>
+
+<h2 class="section-title"><span>🛒</span>Популярні магазини</h2>
+
+<a class="shop-link" href="https://flagman.kiev.ua" target="_blank" rel="noopener">
+<span class="num">🏪</span><span>Флагман (Flagman)</span><span class="arrow">→</span>
+</a>
+
+<a class="shop-link" href="https://fanatik.com.ua" target="_blank" rel="noopener">
+<span class="num">🏪</span><span>Фанатик (Fanatik)</span><span class="arrow">→</span>
+</a>
+
+<a class="shop-link" href="https://apxtackle.com" target="_blank" rel="noopener">
+<span class="num">🏪</span><span>Apex Fishing</span><span class="arrow">→</span>
+</a>
+
+<div class="footer">
+<span class="fish">🐟</span>
+Ні хвоста, ні луски! Вдалої риболовлі.
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.menu-btn').forEach(function(btn){
+btn.addEventListener('click', function(){
+this.parentElement.classList.toggle('open');
+});
+});
+</script>
+</body>
+</html>
